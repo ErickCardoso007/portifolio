@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
+import Profile from '../assets/Profile.jpg';
 
 const HeaderContainer = styled.header`
   background-color: #1d7874;
@@ -144,7 +145,7 @@ const Header = () => {
     <>
       <HeaderContainer>
         <LogoContainer>
-          <ImageProfiles src="https://media.licdn.com/dms/image/v2/D4D03AQEGYsp8feuv3g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723924855817?e=1729728000&v=beta&t=LYG8hb-R9qcZzz_R5IJSK_dAzNmhggjsJJrPkIpBGuE" alt="Profile" />
+          <ImageProfiles src={Profile} alt="Profile" />
           <Logo>ERICK CARDOSO</Logo>
         </LogoContainer>
         <Navbar>
