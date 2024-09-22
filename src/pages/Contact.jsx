@@ -30,14 +30,14 @@ const ContactForm = styled.form`
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   max-width: 600px;
   width: 100%;
 `;
 
 const InputContainer = styled.div`
   position: relative;
-  margin: 20px 0;
+  margin: 10px 0;
 `;
 
 const InputField = styled.input`
