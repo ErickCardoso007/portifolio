@@ -1,9 +1,7 @@
-// src/components/Contact.jsx
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import emailjs from 'emailjs-com';
 import PrimaryButton from '../components/PrimaryButton';
-
 
 const ContactSection = styled.section`
   display: flex;
@@ -37,6 +35,11 @@ const ContactForm = styled.form`
   width: 100%;
 `;
 
+const InputContainer = styled.div`
+  position: relative;
+  margin: 20px 0;
+`;
+
 const InputField = styled.input`
   width: 100%;
   padding: 15px;
@@ -65,6 +68,40 @@ const TextArea = styled.textarea`
 
   &:focus {
     border-color: #6c63ff;
+  }
+`;
+
+const Label = styled.label`
+  position: absolute;
+  top: 26px;
+  left: 15px;
+  font-size: 1rem;
+  color: #aaa;
+  transition: 0.2s;
+  pointer-events: none;
+  z-index: 1;
+
+  /* Background to hide the part of the border behind the label */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -5px;
+    right: -5px;
+    height: 20px;
+    background-color: #fff; /* Same color as the form background */
+    z-index: -1; /* Make sure it sits behind the label */
+  }
+
+  /* Move the label up when the input or textarea is focused or filled */
+  ${InputField}:focus ~ &,
+  ${InputField}:not(:placeholder-shown) ~ &,
+  ${TextArea}:focus ~ &,
+  ${TextArea}:not(:placeholder-shown) ~ & {
+    top: -2px;
+    left: 10px;
+    font-size: 0.85rem;
+    color: #6c63ff;
   }
 `;
 
@@ -146,30 +183,42 @@ const Contact = () => {
       <Title>Contact</Title>
       <Subtitle>Feel free to contact me by submitting the form below, and I will get back to you as soon as possible.</Subtitle>
       <ContactForm onSubmit={sendEmail}>
-        <InputField
-          type="text"
-          name="name"
-          placeholder="Enter Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <InputField
-          type="email"
-          name="email"
-          placeholder="Enter Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <TextArea
-          name="message"
-          placeholder="Enter Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <PrimaryButton nameButton={loading ? 'Sending...' : 'Send'} onClick={sendEmail} disabled={loading} />
+        <InputContainer>
+          <InputField
+            type="text"
+            name="name"
+            id="name"
+            placeholder=" "
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <Label htmlFor="name">Name</Label>
+        </InputContainer>
+        <InputContainer>
+          <InputField
+            type="email"
+            name="email"
+            id="email"
+            placeholder=" "
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <Label htmlFor="email">Email</Label>
+        </InputContainer>
+        <InputContainer>
+          <TextArea
+            name="message"
+            id="message"
+            placeholder=" "
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <Label htmlFor="message">Message</Label>
+        </InputContainer>
+        <PrimaryButton nameButton={loading ? 'Sending...' : 'Send Message'} onClick={sendEmail} disabled={loading} />
         {showMessage && <FeedbackMessage success={feedbackMessage.includes('successfully')}>{feedbackMessage}</FeedbackMessage>}
       </ContactForm>
     </ContactSection>
