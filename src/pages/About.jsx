@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import styled from 'styled-components';
 import { scroller } from 'react-scroll';
 import PrimaryButton from '../components/PrimaryButton';
@@ -17,7 +16,7 @@ const Title = styled.h1`
   color: #333;
   margin-bottom: 10px; 
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombreamento leve */
-   &::after {
+  &::after {
     content: '';
     display: block;
     width: 25px; 
