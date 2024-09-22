@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box; 
   }
   .slick-slider {
-  margin: 0 -15px; /* Ajuste a margem conforme necessário */
+  margin: 0 -15px; 
   }
   body {
     margin: 0;

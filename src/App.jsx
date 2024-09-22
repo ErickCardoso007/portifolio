@@ -8,7 +8,7 @@ import Home from './pages/Home';
 const App = () => (
   <>
     <Header />
-    <Element name="hero" id="hero">
+    <Element name="home" id="home">
       <Home />
     </Element>
     <Element name="about" id="about">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import emailjs from 'emailjs-com';
-import PrimaryButton from '../components/PrimaryButton'; // Importando o PrimaryButton
+import PrimaryButton from '../components/PrimaryButton';
 
 const ContactSection = styled.section`
   display: flex;
@@ -119,10 +119,10 @@ const Contact = () => {
     setFeedbackMessage('');
 
     emailjs.send(
-      'service_mektps9', // Replace with your Service ID
-      'template_eilk63d', // Replace with your Template ID
+      'service_mektps9',
+      'template_eilk63d',
       formData,
-      'q-7CQ3yr1dE-Hgynf', // Replace with your EmailJS User ID
+      'q-7CQ3yr1dE-Hgynf',
     )
     .then(
       () => {

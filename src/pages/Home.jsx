@@ -12,7 +12,6 @@ const pulse = keyframes`
   }
 `;
 
-// Animação de descida da seta
 const bounce = keyframes`
   0%, 100% {
     transform: translateY(0);
@@ -34,8 +33,8 @@ const HeroContainer = styled.section`
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.8); // Fundo com transparência
-  backdrop-filter: blur(10px); // Efeito de desfoque
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 `;
 
 const Title = styled.h1`
@@ -100,7 +99,7 @@ const Home = () => {
   };
 
   return (
-    <HeroContainer id="hero">
+    <HeroContainer id="home">
       <Title>Hey, I am Erick Cardoso!</Title>
       <Paragraph>
         A result-oriented web developer building and managing websites and web applications that lead to the success of the overall product.
