@@ -15,7 +15,25 @@ const Title = styled.h1`
   text-align: center;
   font-size: 2.5rem;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 10px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombreamento leve */
+   &::after {
+    content: '';
+    display: block;
+    width: 25px; 
+    height: 4px; 
+    background-color: #1d7874; 
+    margin: 10px auto 0; 
+    border-radius: 2px; 
+  }
+`;
+
+const Subtitle = styled.div`
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px; 
+  position: relative;
 `;
 
 const Content = styled.div`
@@ -47,12 +65,12 @@ const Paragraph = styled.p`
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Ajustado para maior espaçamento */
 `;
 
 const Highlight = styled.span`
   font-weight: bold;
-  color: #6c63ff; /* Mude a cor conforme necessário */
+  color: #6c63ff;
 `;
 
 const SkillsSection = styled.div`
@@ -77,6 +95,11 @@ const Skill = styled.div`
   margin-right: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
+  transition: background-color 0.3s; /* Efeito de transição suave */
+  
+  &:hover {
+    background-color: #d0d0d0; /* Efeito hover */
+  }
 `;
 
 const AboutSection = () => {
@@ -91,6 +114,9 @@ const AboutSection = () => {
   return (
     <Container>
       <Title>About Me</Title>
+      <Subtitle>
+        Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.
+      </Subtitle>
       <Content>
         <TextSection>
           <Heading>Get to know me!</Heading>
