@@ -1,28 +1,26 @@
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
-import styled from 'styled-components';
-
-const AppContainer = styled.div`
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  padding-top: 60px; /* Espaço para o header fixo */
-`;
+import { Element } from 'react-scroll';
+import Header from './components/Header'
+import About from './pages/About';
+import Projects from './pages/Projects';  
+import Contact from './pages/Contact';
+import Home from './pages/Home';
 
 const App = () => (
-  <AppContainer>
+  <>
     <Header />
-    <HeroSection />
-    <About />
-    <Skills />
-    <Projects />
-    <Footer />
-  </AppContainer>
+    <Element name="hero" id="hero">
+      <Home />
+    </Element>
+    <Element name="about" id="about">
+      <About />
+    </Element>
+    <Element name="projects" id="projects">
+      <Projects />
+    </Element>
+    <Element name="contact" id="contact">
+      <Contact />
+    </Element>
+  </>
 );
 
 export default App;
