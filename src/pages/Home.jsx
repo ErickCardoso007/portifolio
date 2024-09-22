@@ -21,7 +21,7 @@ const bounce = keyframes`
   }
 `;
 
-const HeroContainer = styled.section`
+const HomeContainer = styled.section`
   height: 87vh;
   display: flex;
   align-items: center;
@@ -99,12 +99,12 @@ const Home = () => {
   };
 
   return (
-    <HeroContainer id="home">
+    <HomeContainer id="home">
       <Title>Hey, I am Erick Cardoso!</Title>
       <Paragraph>
         A result-oriented web developer building and managing websites and web applications that lead to the success of the overall product.
       </Paragraph>
-      <PrimaryButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
+      <PrimaryButton nameButton="PROJECTS" onClick={scrollToProjects} />
       <ScrollIndicator onClick={scrollToNextSection}>
         <div className="arrow"></div>
         <div className="text">Scroll Down</div>
@@ -118,7 +118,7 @@ const Home = () => {
           whatsapp: "https://wa.me/5551997025784",
         }}
       />
-    </HeroContainer>
+    </HomeContainer>
   );
 };
 

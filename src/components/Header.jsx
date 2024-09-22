@@ -151,7 +151,7 @@ const Header = () => {
         <Navbar>
           <NavbarList>
             <NavbarItem>
-              <NavbarLink to="hero" smooth={true} duration={500} offset={-80} spy={true} exact="true">HOME</NavbarLink>
+              <NavbarLink to="home" smooth={true} duration={500} offset={-80} spy={true} exact="true">HOME</NavbarLink>
             </NavbarItem>
             <NavbarItem>
               <NavbarLink to="about" smooth={true} duration={500} offset={-80} spy={true} exact="true">ABOUT</NavbarLink>
@@ -173,7 +173,7 @@ const Header = () => {
       <Sidebar isOpen={isSidebarOpen}>
         <SidebarList>
           <SidebarItem>
-            <SidebarLink to="hero" smooth={true} duration={500} offset={-80} spy={true} exact="true" onClick={() => setIsSidebarOpen(false)}>HOME</SidebarLink>
+            <SidebarLink to="home" smooth={true} duration={500} offset={-80} spy={true} exact="true" onClick={() => setIsSidebarOpen(false)}>HOME</SidebarLink>
           </SidebarItem>
           <SidebarItem>
             <SidebarLink to="about" smooth={true} duration={500} offset={-80} spy={true} exact="true" onClick={() => setIsSidebarOpen(false)}>ABOUT</SidebarLink>

@@ -3,76 +3,78 @@ import styled from 'styled-components';
 import { scroller } from 'react-scroll';
 import PrimaryButton from '../components/PrimaryButton';
 
+
+const Container = styled.section`
+  padding: 50px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+`;
+
+const TextSection = styled.div`
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+`;
+
+const Heading = styled.h3`
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #444;
+`;
+
+const Paragraph = styled.p`
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+`;
+
+const SkillsSection = styled.div`
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+`;
+
+const SkillsTitle = styled.h4`
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #444;
+  width: 100%;
+`;
+
+const Skill = styled.div`
+  background-color: #e8e8e8;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+`;
+
 const AboutSection = () => {
-  const Container = styled.section`
-    padding: 50px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  `;
-
-  const Title = styled.h1`
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 40px;
-  `;
-
-  const Content = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
-    margin-bottom: 30px;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 30px;
-    }
-  `;
-
-  const TextSection = styled.div`
-    flex: 1;
-    max-width: 600px;
-    padding: 20px;
-  `;
-
-  const Heading = styled.h3`
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #444;
-  `;
-
-  const Paragraph = styled.p`
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  `;
-
-  const SkillsSection = styled.div`
-    text-align: center;
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  `;
-
-  const SkillsTitle = styled.h4`
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #444;
-    width: 100%;
-  `;
-
-  const Skill = styled.div`
-    background-color: #e8e8e8;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-  `;
-
   const scrollToContact = () => {
     scroller.scrollTo('contact', {
       smooth: true,
@@ -89,17 +91,14 @@ const AboutSection = () => {
           <Heading>Get to know me!</Heading>
           <Paragraph>
             I'm a <span>Frontend Developer</span> with a focus on creating elegant and modern web applications.
-            I enjoy working on projects that push the boundaries of user interaction, with a special interest
-            in making the web more interactive and visually appealing.
-            <br /><br />
-            I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+            I'm open to job opportunities where I can contribute, learn, and grow.
           </Paragraph>
           <PrimaryButton nameButton="CONTACT" onClick={scrollToContact} />
         </TextSection>
         <SkillsSection>
           <SkillsTitle>My Skills</SkillsTitle>
-          <Skill>Html</Skill>
-          <Skill>Css</Skill>
+          <Skill>HTML</Skill>
+          <Skill>CSS</Skill>
           <Skill>React</Skill>
           <Skill>Node</Skill>
           <Skill>Sass</Skill>
@@ -110,7 +109,7 @@ const AboutSection = () => {
           <Skill>Responsive Design</Skill>
           <Skill>Figma</Skill>
           <Skill>Git</Skill>
-          <Skill>Github</Skill>
+          <Skill>GitHub</Skill>
         </SkillsSection>
       </Content>
     </Container>

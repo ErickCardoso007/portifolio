@@ -1,7 +1,9 @@
+// src/components/Contact.jsx
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import emailjs from 'emailjs-com';
 import PrimaryButton from '../components/PrimaryButton';
+
 
 const ContactSection = styled.section`
   display: flex;
@@ -109,9 +111,7 @@ const Contact = () => {
     if (!formData.name || !formData.email || !formData.message) {
       setFeedbackMessage('Please fill in all fields.');
       setShowMessage(true);
-      setTimeout(() => {
-        setShowMessage(false);
-      }, 3000);
+      setTimeout(() => setShowMessage(false), 3000);
       return;
     }
 
@@ -129,22 +129,16 @@ const Contact = () => {
         setFormData({ name: '', email: '', message: '' });
         setFeedbackMessage('Message sent successfully!');
         setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-        }, 1000);
+        setTimeout(() => setShowMessage(false), 1000);
       },
       (error) => {
         console.error(error);
         setFeedbackMessage('An error occurred, please try again.');
         setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-        }, 2000);
+        setTimeout(() => setShowMessage(false), 2000);
       }
     )
-    .finally(() => {
-      setLoading(false);
-    });
+    .finally(() => setLoading(false));
   };
 
   return (
@@ -175,13 +169,9 @@ const Contact = () => {
           onChange={handleChange}
           required
         />
-        <PrimaryButton nameButton={loading ? 'Sending...' : 'SEND'} scrollToSection={sendEmail} disabled={loading} />
+        <PrimaryButton nameButton={loading ? 'Sending...' : 'Send'} onClick={sendEmail} disabled={loading} />
+        {showMessage && <FeedbackMessage success={feedbackMessage.includes('successfully')}>{feedbackMessage}</FeedbackMessage>}
       </ContactForm>
-      {showMessage && (
-        <FeedbackMessage success={feedbackMessage === 'Message sent successfully!'} visible={showMessage}>
-          {feedbackMessage}
-        </FeedbackMessage>
-      )}
     </ContactSection>
   );
 };

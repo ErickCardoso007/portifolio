@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+// src/components/PrimaryButton.jsx
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const Button = styled.button`
   background-color: #1d7874;
@@ -10,19 +11,21 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-
   &:hover {
     background-color: #155c59;
   }
 `;
 
-const PrimaryButton = ({ nameButton, scrollToSection }) => {
-  return <Button onClick={scrollToSection}>{nameButton}</Button>;
-};
+const PrimaryButton = ({ nameButton, onClick, disabled }) => (
+  <Button onClick={onClick} disabled={disabled}>
+    {nameButton}
+  </Button>
+);
 
 PrimaryButton.propTypes = {
   nameButton: PropTypes.string.isRequired,
-  scrollToSection: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 export default PrimaryButton;
