@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
+
 import styled from 'styled-components';
 import { scroller } from 'react-scroll';
 import PrimaryButton from '../components/PrimaryButton';
-
 
 const Container = styled.section`
   padding: 50px;
@@ -50,6 +50,11 @@ const Paragraph = styled.p`
   margin-bottom: 30px;
 `;
 
+const Highlight = styled.span`
+  font-weight: bold;
+  color: #6c63ff; /* Mude a cor conforme necessário */
+`;
+
 const SkillsSection = styled.div`
   text-align: center;
   flex: 1;
@@ -90,8 +95,10 @@ const AboutSection = () => {
         <TextSection>
           <Heading>Get to know me!</Heading>
           <Paragraph>
-            I'm a <span>Frontend Developer</span> with a focus on creating elegant and modern web applications.
-            I'm open to job opportunities where I can contribute, learn, and grow.
+            I'm a <Highlight>frontend-focused web developer</Highlight> dedicated to creating and managing the frontend of websites and web applications. My goal is to ensure the overall success of each product I work on.
+          </Paragraph>
+          <Paragraph>
+            I'm eager to explore new job opportunities where I can leverage my skills and contribute to impactful projects. If you have an opportunity or would like to discuss potential collaborations, please don't hesitate to reach out.
           </Paragraph>
           <PrimaryButton nameButton="CONTACT" onClick={scrollToContact} />
         </TextSection>
