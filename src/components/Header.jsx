@@ -19,14 +19,15 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-size: 3px; 
-  margin-left: 10px;
-  
-  @media (min-width: 768px) {
-    font-size: 16px; 
-  }
-  @media (min-width: 1024px) {
+  font-size: 18px; 
+  margin-left: 3px;
+
+  @media (max-width: 768px) {
     font-size: 20px; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px; 
   }
 `;
 
@@ -37,13 +38,19 @@ const LogoContainer = styled.div`
 `;
 
 const ImageProfiles = styled.img`
-  width: 10px; 
-  height: 10px; 
+  width: 45px; 
+  height: 45px; 
   border-radius: 50%;
   margin-right: 10px; 
-  @media (min-width: 768px) {
-    width: 50px; 
-    height: 50px; 
+
+  @media (max-width: 768px) {
+    width: 45px; 
+    height: 45px;
+  }
+
+  @media (max-width: 480px) {
+    width: 40px; 
+    height: 40px; 
   }
 `;
 
@@ -121,7 +128,6 @@ const NavbarList = styled.ul`
   list-style: none;
   display: flex;
   padding: 0;
-  
 `;
 
 const NavbarItem = styled.li`

@@ -58,7 +58,7 @@ const Paragraph = styled.p`
 
 const ScrollIndicator = styled.div`
   position: absolute;
-  bottom: 20px;
+  bottom: 30px; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -83,6 +83,7 @@ const ScrollIndicator = styled.div`
   }
 `;
 
+
 const Home = () => {
   const scrollToNextSection = () => {
     scroller.scrollTo('about', {
@@ -104,7 +105,7 @@ const Home = () => {
       <Paragraph>
         A result-oriented web developer building and managing websites and web applications that lead to the success of the overall product.
       </Paragraph>
-      <PrimaryButton nameButton="PROJECTS" onClick={scrollToProjects} />
+      <PrimaryButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
       <ScrollIndicator onClick={scrollToNextSection}>
         <div className="arrow"></div>
         <div className="text">Scroll Down</div>
