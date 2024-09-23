@@ -12,7 +12,7 @@ const Container = styled.section`
 
 const Title = styled.h1`
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 10px; 
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombreamento leve */
@@ -112,7 +112,7 @@ const AboutSection = () => {
 
   return (
     <Container>
-      <Title>About Me</Title>
+      <Title>ABOUT ME</Title>
       <Subtitle>
         Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.
       </Subtitle>

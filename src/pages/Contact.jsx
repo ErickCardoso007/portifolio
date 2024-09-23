@@ -9,14 +9,32 @@ const ContactSection = styled.section`
   align-items: center;
   padding: 50px 20px;
   background-color: #f5f5f5;
+
+  @media (max-width: 768px) {
+    padding: 30px 10px; /* Reduz o padding em telas menores */
+  }
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
   color: #333;
   margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 25px; 
+    height: 4px; 
+    background-color: #1d7874; 
+    margin: 10px auto 0; 
+    border-radius: 2px; 
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem; /* Ajusta o tamanho da fonte em telas menores */
+  }
 `;
 
 const Subtitle = styled.p`
@@ -24,6 +42,10 @@ const Subtitle = styled.p`
   text-align: center;
   color: #666;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; /* Ajusta o tamanho da fonte em telas menores */
+  }
 `;
 
 const ContactForm = styled.form`
@@ -33,6 +55,10 @@ const ContactForm = styled.form`
   padding: 20px;
   max-width: 600px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 15px; /* Reduz o padding em telas menores */
+  }
 `;
 
 const InputContainer = styled.div`
@@ -51,7 +77,11 @@ const InputField = styled.input`
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: #6c63ff;
+    border-color: #1d7874;
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px; /* Ajusta o padding em telas menores */
   }
 `;
 
@@ -67,7 +97,11 @@ const TextArea = styled.textarea`
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: #6c63ff;
+    border-color: #1d7874;
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px; /* Ajusta o padding em telas menores */
   }
 `;
 
@@ -81,7 +115,6 @@ const Label = styled.label`
   pointer-events: none;
   z-index: 1;
 
-  /* Background to hide the part of the border behind the label */
   &::before {
     content: '';
     position: absolute;
@@ -89,19 +122,19 @@ const Label = styled.label`
     left: -5px;
     right: -5px;
     height: 20px;
-    background-color: #fff; /* Same color as the form background */
-    z-index: -1; /* Make sure it sits behind the label */
+    color: #1d7874;
+    background-color: #fff;
+    z-index: -1;
   }
 
-  /* Move the label up when the input or textarea is focused or filled */
   ${InputField}:focus ~ &,
   ${InputField}:not(:placeholder-shown) ~ &,
   ${TextArea}:focus ~ &,
   ${TextArea}:not(:placeholder-shown) ~ & {
-    top: -2px;
+    top: 1px;
     left: 10px;
     font-size: 0.85rem;
-    color: #6c63ff;
+    color: #1d7874;
   }
 `;
 
@@ -122,6 +155,10 @@ const FeedbackMessage = styled.p`
   font-size: 1rem;
   color: ${(props) => (props.success ? '#2d7d21' : '#eb0a03')};
   animation: ${bounce} 0.6s forwards;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte em telas menores */
+  }
 `;
 
 const Contact = () => {
@@ -180,7 +217,7 @@ const Contact = () => {
 
   return (
     <ContactSection id='contact'>
-      <Title>Contact</Title>
+      <Title>CONTACT</Title>
       <Subtitle>Feel free to contact me by submitting the form below, and I will get back to you as soon as possible.</Subtitle>
       <ContactForm onSubmit={sendEmail}>
         <InputContainer>

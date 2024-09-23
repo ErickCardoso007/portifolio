@@ -7,9 +7,18 @@ const ProjectsContainer = styled.section`
 `;
 
 const ProjectsTitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 30px;
   color: #333;
+  &::after {
+    content: '';
+    display: block;
+    width: 25px; 
+    height: 4px; 
+    background-color: #1d7874; 
+    margin: 10px auto 0; 
+    border-radius: 2px; 
+  }
 `;
 
 const ProjectList = styled.ul`
@@ -51,7 +60,7 @@ const ProjectDescription = styled.p`
 
 const Projects = () => (
   <ProjectsContainer id="projects">
-    <ProjectsTitle>My Projects</ProjectsTitle>
+    <ProjectsTitle>MY PROJECTS</ProjectsTitle>
     <ProjectList>
       <ProjectItem>
         <ProjectTitle></ProjectTitle>
