@@ -14,34 +14,36 @@ const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 0.5rem; 
   z-index: 1000;
 `;
 
 const Logo = styled.h1`
-  font-size: 17px;
+  font-size: 3px; 
   margin-left: 10px;
+  
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 16px; 
   }
   @media (min-width: 1024px) {
-    font-size: 24px;
+    font-size: 20px; 
   }
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-left: 30px;
 `;
 
 const ImageProfiles = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 10px; 
+  height: 10px; 
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 10px; 
   @media (min-width: 768px) {
-    width: 60px;
-    height: 60px;
+    width: 50px; 
+    height: 50px; 
   }
 `;
 
@@ -56,10 +58,10 @@ const BurgerMenu = styled.div`
 `;
 
 const BurgerLine = styled.div`
-  width: 25px;
-  height: 3px;
+  width: 20px; 
+  height: 2px; 
   background-color: white;
-  margin: 3px 0;
+  margin: 2px 0; 
   transition: background-color 0.3s ease, transform 0.3s ease;
   &:hover {
     background-color: #DCDCDC;
@@ -71,12 +73,12 @@ const Sidebar = styled.div`
   position: fixed;
   top: 0;
   right: ${({ isOpen }) => (isOpen ? '0' : '-250px')};
-  width: 250px;
+  width: 200px; 
   height: 100%;
   background-color: #1d7874;
   color: white;
   transition: right 0.3s ease;
-  padding: 2rem;
+  padding: 1.5rem; 
   z-index: 999;
   box-sizing: border-box;
   @media (min-width: 769px) {
@@ -91,14 +93,14 @@ const SidebarList = styled.ul`
 `;
 
 const SidebarItem = styled.li`
-  margin: 20px 0;
+  margin: 15px 0; 
   text-align: center;
 `;
 
 const SidebarLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem; 
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;  
   &:hover {
@@ -111,7 +113,7 @@ const Navbar = styled.nav`
   display: none;
   @media (min-width: 769px) {
     display: flex;
-    gap: 20px;
+    gap: 15px; 
   }
 `;
 
@@ -119,17 +121,17 @@ const NavbarList = styled.ul`
   list-style: none;
   display: flex;
   padding: 0;
-  margin: 0;
+  
 `;
 
 const NavbarItem = styled.li`
-  margin: 0 20px;
+  margin: 0 15px; 
 `;
 
 const NavbarLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem; 
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   &:hover {
