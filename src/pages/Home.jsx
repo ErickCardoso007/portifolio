@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { scroller } from 'react-scroll';
 import ContactCard from '../components/ContactCard'; 
-import ScrollButton from '../components/ScrollButton';
+import PrimaryButton from '../components/PrimaryButton';
 
 const pulse = keyframes`
   0%, 100% {
@@ -84,12 +84,6 @@ const ScrollIndicator = styled.div`
 `;
 
 const Home = () => {
-  const scrollToNextSection = () => {
-    scroller.scrollTo('about', {
-      smooth: true,
-      offset: -70,
-    });
-  };
 
   const scrollToProjects = () => {
     scroller.scrollTo('projects', {
@@ -104,8 +98,8 @@ const Home = () => {
       <Paragraph>
         A result-oriented web developer building and managing websites and web applications that lead to the success of the overall product.
       </Paragraph>
-      <ScrollButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
-      <ScrollIndicator onClick={scrollToNextSection}>
+      <PrimaryButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
+      <ScrollIndicator>
         <div className="arrow"></div>
         <div className="text">Scroll Down</div>
       </ScrollIndicator>
