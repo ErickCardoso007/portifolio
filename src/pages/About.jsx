@@ -15,7 +15,7 @@ const Title = styled.h1`
   font-size: 2rem;
   color: #333;
   margin-bottom: 10px; 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombreamento leve */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
   &::after {
     content: '';
     display: block;
@@ -64,7 +64,7 @@ const Paragraph = styled.p`
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 20px; /* Ajustado para maior espaçamento */
+  margin-bottom: 20px; 
 `;
 
 const Highlight = styled.span`
@@ -94,11 +94,8 @@ const Skill = styled.div`
   margin-right: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
-  transition: background-color 0.3s; /* Efeito de transição suave */
-  
-  &:hover {
-    background-color: #d0d0d0; /* Efeito hover */
-  }
+  transition: background-color 0.3s; 
+
 `;
 
 const AboutSection = () => {

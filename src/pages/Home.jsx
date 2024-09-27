@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { scroller } from 'react-scroll';
 import ContactCard from '../components/ContactCard'; 
-import PrimaryButton from '../components/PrimaryButton';
+import ScrollButton from '../components/ScrollButton';
 
 const pulse = keyframes`
   0%, 100% {
@@ -83,7 +83,6 @@ const ScrollIndicator = styled.div`
   }
 `;
 
-
 const Home = () => {
   const scrollToNextSection = () => {
     scroller.scrollTo('about', {
@@ -105,13 +104,12 @@ const Home = () => {
       <Paragraph>
         A result-oriented web developer building and managing websites and web applications that lead to the success of the overall product.
       </Paragraph>
-      <PrimaryButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
+      <ScrollButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
       <ScrollIndicator onClick={scrollToNextSection}>
         <div className="arrow"></div>
         <div className="text">Scroll Down</div>
       </ScrollIndicator>
       <ContactCard
-        image="url_to_your_image"
         name="Erick Cardoso"
         links={{
           linkedin: "https://www.linkedin.com/in/erickcardosozz/",

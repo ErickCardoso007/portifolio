@@ -11,7 +11,7 @@ const ContactSection = styled.section`
   background-color: #f5f5f5;
 
   @media (max-width: 768px) {
-    padding: 30px 10px; /* Reduz o padding em telas menores */
+    padding: 30px 10px; 
   }
 `;
 
@@ -33,7 +33,7 @@ const Title = styled.h2`
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem; /* Ajusta o tamanho da fonte em telas menores */
+    font-size: 2rem; 
   }
 `;
 
@@ -44,7 +44,7 @@ const Subtitle = styled.p`
   margin-bottom: 40px;
 
   @media (max-width: 768px) {
-    font-size: 1rem; /* Ajusta o tamanho da fonte em telas menores */
+    font-size: 1rem; 
   }
 `;
 
@@ -57,7 +57,7 @@ const ContactForm = styled.form`
   width: 100%;
 
   @media (max-width: 768px) {
-    padding: 15px; /* Reduz o padding em telas menores */
+    padding: 15px; 
   }
 `;
 
@@ -81,7 +81,7 @@ const InputField = styled.input`
   }
 
   @media (max-width: 768px) {
-    padding: 12px; /* Ajusta o padding em telas menores */
+    padding: 12px; 
   }
 `;
 
@@ -101,7 +101,7 @@ const TextArea = styled.textarea`
   }
 
   @media (max-width: 768px) {
-    padding: 12px; /* Ajusta o padding em telas menores */
+    padding: 12px; 
   }
 `;
 
@@ -157,7 +157,7 @@ const FeedbackMessage = styled.p`
   animation: ${bounce} 0.6s forwards;
 
   @media (max-width: 768px) {
-    font-size: 0.9rem; /* Ajusta o tamanho da fonte em telas menores */
+    font-size: 0.9rem; 
   }
 `;
 
