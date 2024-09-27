@@ -10,19 +10,33 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+
   &:hover {
     background-color: #155c59;
   }
 `;
 
 const ScrollButton = ({ nameButton, scrollToSection }) => {
-    return <Button onClick={scrollToSection}>{nameButton}</Button>;
+  const handleClick = () => {
+    if (scrollToSection) {
+      scrollToSection();
+    } else {
+      const section = document.getElementById("projects");
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
+
+  return <Button onClick={handleClick}>{nameButton}</Button>;
 };
 
-    ScrollButton.propTypes = {
-        nameButton: PropTypes.string.isRequired, 
-        scrollToSection: PropTypes.func.isRequired,
-  };
-  
+ScrollButton.propTypes = {
+  nameButton: PropTypes.string.isRequired,
+  scrollToSection: PropTypes.func,
+};
+
 export default ScrollButton;
-  
