@@ -131,7 +131,6 @@ const AboutSection = () => {
           <Skill>React</Skill>
           <Skill>Node</Skill>
           <Skill>Sass</Skill>
-          <Skill>Angular</Skill>
           <Skill>PostgreSQL</Skill>
           <Skill>Storybook</Skill>
           <Skill>Styled-components</Skill>

@@ -111,8 +111,8 @@ const SidebarLink = styled(Link)`
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;  
   &:hover {
-    color: #A9A9A9; /* Escurecimento delicado */
-    transform: translateX(2px); /* Mover minimamente para frente */
+    color: #A9A9A9; 
+    transform: translateX(2px); 
   }
 `;
 
