@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { scroller } from 'react-scroll';
 import ContactCard from '../components/ContactCard'; 
-import PrimaryButton from '../components/PrimaryButton';
+import ScrollButton from '../components/ScrollButton';
 
 const pulse = keyframes`
   0%, 100% {
@@ -98,7 +98,7 @@ const Home = () => {
       <Paragraph>
         A result-oriented web developer building and managing websites and web applications that lead to the success of the overall product.
       </Paragraph>
-      <PrimaryButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
+      <ScrollButton nameButton="PROJECTS" scrollToSection={scrollToProjects} />
       <ScrollIndicator>
         <div className="arrow"></div>
         <div className="text">Scroll Down</div>
@@ -107,7 +107,7 @@ const Home = () => {
         name="Erick Cardoso"
         links={{
           linkedin: "https://www.linkedin.com/in/erickcardosozz/",
-          email: "mailto:youremail@example.com",
+          email: "mailto:erickcardosofront@gmail.com",
           whatsapp: "https://wa.me/5551997025784",
         }}
       />
